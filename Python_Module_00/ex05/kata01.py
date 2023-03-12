@@ -1,34 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    exec.py                                            :+:      :+:    :+:    #
+#    kata01.py                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/12 15:56:26 by jihoolee          #+#    #+#              #
-#    Updated: 2023/03/12 16:10:39 by jihoolee         ###   ########.fr        #
+#    Created: 2023/03/12 16:24:11 by jihoolee          #+#    #+#              #
+#    Updated: 2023/03/12 16:24:12 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-import sys
+kata = (19, 42, 21)
 
 
-def revert_case(string: str) -> str:
-    return ''.join([
-        char.lower() if char.isupper() else
-        char.upper() for char in string])
-
-
-def main(argv):
-    argc = len(argv)
-
-    if (argc == 1):
-        print('Argument expected for thgis python script')
-        print('Usage: python3 exec.py [string]')
-    else:
-        string = ' '.join(argv[1:])
-        print(revert_case(string[::-1]))
+def main():
+    print(f'The {len(kata)} numbers are: {", ".join(map(str, kata))}')
 
 
 if (__name__ == '__main__'):
-    main(sys.argv)
+    main()
