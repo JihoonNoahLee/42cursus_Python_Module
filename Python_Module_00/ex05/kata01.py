@@ -6,15 +6,21 @@
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 16:24:11 by jihoolee          #+#    #+#              #
-#    Updated: 2023/03/12 16:24:12 by jihoolee         ###   ########.fr        #
+#    Updated: 2023/03/18 23:48:50 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-kata = (19, 42, 21)
+# Put this at the top of your kata01.py file
+kata = {
+    'Python': 'Guido van Rossum',
+    'Ruby': 'Yukihiro Matsumoto',
+    'PHP': 'Rasmus Lerdorf',
+}
 
 
 def main():
-    print(f'The {len(kata)} numbers are: {", ".join(map(str, kata))}')
+    for language, creator in kata.items():
+        print(f'{language} was created by {creator}')
 
 
 if (__name__ == '__main__'):
