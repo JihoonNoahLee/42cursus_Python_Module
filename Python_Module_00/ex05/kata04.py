@@ -6,16 +6,17 @@
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 16:24:31 by jihoolee          #+#    #+#              #
-#    Updated: 2023/03/12 16:24:32 by jihoolee         ###   ########.fr        #
+#    Updated: 2023/03/19 11:33:31 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-kata = (2019, 9, 25, 3, 30)
+# Put this at the top of your kata04.py file
+kata = (0, 4, 132.42222, 10000, 12345.67)
 
 
 def main():
-    year, month, date, hour, minute = kata
-    print(f'{month:02}/{date:02}/{year:04} {hour:02}:{minute:02}')
+    print(f'module_{kata[0]:0>2}, ex_{kata[1]:0>2} : '
+          f'{kata[2]:.2f}, {kata[3]:.2e}, {kata[4]:.2e}')
 
 
 if (__name__ == '__main__'):
