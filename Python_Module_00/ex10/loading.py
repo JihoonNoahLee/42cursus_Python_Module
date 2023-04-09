@@ -1,29 +1,20 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    filterwords.py                                     :+:      :+:    :+:    #
+#    loading.py                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 20:34:50 by jihoolee          #+#    #+#              #
-#    Updated: 2023/04/09 15:11:05 by jihoolee         ###   ########.fr        #
+#    Created: 2023/04/09 16:51:26 by jihoolee          #+#    #+#              #
+#    Updated: 2023/04/09 16:52:18 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import sys
-from string import punctuation
-
-
-def split_longer(string: str, word_len: int):
-    string = string.translate(str.maketrans('', '', punctuation))
-    return [word for word in string.split() if len(word) > word_len]
 
 
 def main(argv):
-    assert len(argv) == 3
-
-    print(f'argv[1]: {argv[1]}')
-    print(split_longer(argv[1], int(argv[2])))
+    pass
 
 
 if (__name__ == '__main__'):
