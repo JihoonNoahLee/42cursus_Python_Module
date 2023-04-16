@@ -6,7 +6,7 @@
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 16:17:50 by jihoolee          #+#    #+#              #
-#    Updated: 2023/03/12 16:17:52 by jihoolee         ###   ########.fr        #
+#    Updated: 2023/04/15 19:55:15 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,16 +29,15 @@ def print_whois(num_str):
 def main(argv):
     if (len(argv) == 1):
         print('One argument expected for this python script')
-        print('usage: python3 whois.py [number]')
-    else:
-        try:
-            if (len(argv) > 2):
-                raise AssertionError('more than one argument are provided')
-            else:
-                print_whois(argv[1])
-        except Exception as e:
-            print(f'{type(e).__name__}: {e.args[0]}')
+        print('usage: python whois.py [number]')
+        return
+    assert len(argv) == 2, 'more than one argument are provided'
+
+    print_whois(argv[1])
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    try:
+        main(sys.argv)
+    except Exception as e:
+        print(f'{type(e).__name__}: {e.args[0]}')

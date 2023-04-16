@@ -6,7 +6,7 @@
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 16:18:36 by jihoolee          #+#    #+#              #
-#    Updated: 2023/03/12 16:18:36 by jihoolee         ###   ########.fr        #
+#    Updated: 2023/04/16 11:52:39 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,13 +32,12 @@ def print_operations(arg1, arg2):
 def main(argv):
     if (len(argv) == 1):
         print('Usage: python3 operations.py [num1] [num2]')
+        print('Example:\n\tpython3 operations.py 10 3')
         return
-    elif (len(argv) != 3):
-        raise AssertionError('two arguments are expected for this script')
+    assert len(argv) == 3, 'two arguments are expected for this script'
+
     try:
-        arg1 = int(argv[1])
-        arg2 = int(argv[2])
-        print_operations(arg1, arg2)
+        print_operations(int(argv[1]), int(argv[2]))
     except Exception as e:
         raise AssertionError('only integers')
 
