@@ -6,7 +6,7 @@
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 16:18:13 by jihoolee          #+#    #+#              #
-#    Updated: 2023/04/16 11:41:41 by jihoolee         ###   ########.fr        #
+#    Updated: 2023/04/16 12:16:12 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ import sys
 from string import punctuation
 
 
-def text_analyzer(string = None):
+def text_analyzer(string=None):
     """
     This function counts the number of upper characters, lower characters,
     punctuation and spaces in a given text.
@@ -45,6 +45,7 @@ def main(argv):
         text_analyzer()
     else:
         text_analyzer(argv[1])
+
 
 if (__name__ == '__main__'):
     try:

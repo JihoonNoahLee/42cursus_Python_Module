@@ -6,7 +6,7 @@
 #    By: jihoolee <jihoolee@student.42SEOUL.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/28 20:34:50 by jihoolee          #+#    #+#              #
-#    Updated: 2023/04/09 15:11:05 by jihoolee         ###   ########.fr        #
+#    Updated: 2023/04/16 12:33:10 by jihoolee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ def split_longer(string: str, word_len: int):
 def main(argv):
     assert len(argv) == 3
 
-    print(f'argv[1]: {argv[1]}')
     print(split_longer(argv[1], int(argv[2])))
 
 
